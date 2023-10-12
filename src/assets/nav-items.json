@@ -1,0 +1,80 @@
+[
+  {
+    "title": {
+      "en": "Home",
+      "cn": "首页"
+    },
+    "href": "/"
+  },
+  {
+    "title": {
+      "en": "Immigration Entrances",
+      "cn": "移民通道"
+    },
+    "children": [
+      {
+        "title": {
+          "en": "Intra-Company Transferee Work Permit / Owner Operator Work Permit",
+          "cn": "高管工签/投资人工签"
+        },
+        "href": "/ict"
+      },
+      {
+        "title": {
+          "en": "British Columbia Provincial Entrepreneur Immigration",
+          "cn": "BC投资移民类别"
+        },
+        "href": "entrepreneur-bcpnp"
+      },
+      {
+        "title": {
+          "en": "British Columbia Provincial Nominee Program",
+          "cn": "BC省提名项目"
+        },
+        "href": "bcpnp"
+      },
+      {
+        "title": {
+          "en": "Federal Express Entry Immigration Program",
+          "cn": "联邦类通道移民项目"
+        },
+        "href": "ee"
+      },
+      {
+        "title": {
+          "en": "Family Sponsorship Program",
+          "cn": "团聚移民项目"
+        },
+        "href": "sponsorship"
+      }
+    ]
+  },
+  {
+    "title": {
+      "en": "About Us",
+      "cn": "关于我们"
+    },
+    "href": "/about-us"
+  },
+  {
+    "title": {
+      "en": "News",
+      "cn": "新闻"
+    },
+    "href": "/news"
+  },
+  {
+    "title": {
+      "en": "EE Score Calculator",
+      "cn": "在线打分"
+    },
+    "href": "/ee-calculator"
+  },
+  {
+    "title": {
+      "en": "Contact Us",
+      "cn": "联系我们"
+    },
+    "href": "/contact-us"
+  }
+]

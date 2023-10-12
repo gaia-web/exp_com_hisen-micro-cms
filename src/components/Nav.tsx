@@ -38,7 +38,7 @@ function renderNavItem(
         startViewTransition(() => item.href && navigate(item.href));
       }}
     >
-      {langHelper(item.title.en, item.title.cn)}
+      {langHelper(item.title)}
       {item.children?.map((item) => renderNavItem(item, navigate, true))}
     </gaia-nav-item>
   );

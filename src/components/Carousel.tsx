@@ -14,13 +14,13 @@ function Carousel() {
             class="col-start-2 row-start-2 text-[3em]"
             style="text-shadow: 0.25em 0.25em 0.25em hsl(0, 0%, 0%, 0.5);"
           >
-            {langHelper(slide.title.en, slide.title.cn)}
+            {langHelper(slide.title)}
           </div>
           <div
             class="col-start-2 row-start-3 text-[1.5em]"
             style="text-shadow: 0.25em 0.25em 0.25em hsl(0, 0%, 0%, 0.5);"
           >
-            {langHelper(slide.subtitle.en, slide.subtitle.cn)}
+            {langHelper(slide.subtitle)}
           </div>
         </div>
       ))}

@@ -21,15 +21,11 @@ const HighlightsSection = () => (
     <div class="flex flex-col gap-y-3 p-3">
       <div class="flex-auto">
         <span class="hue-rotating rounded-[5px] bg-blue-50 text-blue-400 p-2 text-sm">
-          {langHelper(highlights.badge.en, highlights.badge.cn)}
+          {langHelper(highlights.badge)}
         </span>
       </div>
-      <div class="text-bold text-5xl">
-        {langHelper(highlights.title.en, highlights.title.cn)}
-      </div>
-      <div class="text-gray-500">
-        {langHelper(highlights.subtitle.en, highlights.subtitle.cn)}
-      </div>
+      <div class="text-bold text-5xl">{langHelper(highlights.title)}</div>
+      <div class="text-gray-500">{langHelper(highlights.subtitle)}</div>
       {highlights.highlights.map((highlight) => (
         <div class="grid grid-rows-[auto_auto] grid-cols-[auto_1fr] gap-3">
           <div
@@ -39,10 +35,10 @@ const HighlightsSection = () => (
             <img src={highlight.icon} />
           </div>
           <div class="col-start-2 row-start-1">
-            {langHelper(highlight.title.en, highlight.title.cn)}
+            {langHelper(highlight.title)}
           </div>
           <div class="col-start-2 row-start-2 text-gray-500">
-            {langHelper(highlight.content.en, highlight.content.cn)}
+            {langHelper(highlight.content)}
           </div>
         </div>
       ))}

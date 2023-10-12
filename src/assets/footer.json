@@ -1,0 +1,14 @@
+{
+  "address": {
+    "en": "Someplace, Somewhere, World",
+    "cn": "世界上某处某地"
+  },
+  "tel": {
+    "en": "+1(234)5678",
+    "cn": null
+  },
+  "copyright": {
+    "en": "© 2023 HISEN INTERNATIONAL CONSULTING LTD. All rights reserved | By Gaia Web Design",
+    "cn": null
+  }
+}

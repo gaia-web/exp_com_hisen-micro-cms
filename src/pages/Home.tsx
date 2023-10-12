@@ -6,6 +6,7 @@ import { LanguageObject, langHelper } from "../utils/language";
 import highlights from "../assets/highlights.json";
 import programs from "../assets/programs.json";
 import { useNavigate } from "@solidjs/router";
+import { startViewTransition } from "../utils/startViewTransition";
 
 function Home() {
   return (
@@ -62,7 +63,9 @@ const ProgramsSection = () => (
   <div class="max-w-[1280px] mx-auto my-10">
     <div class="text-bold text-6xl text-center">
       <span>{langHelper(programs.title.part1)}</span>
-      <span class="hue-rotating text-orange-400">{langHelper(programs.title.part2)}</span>
+      <span class="hue-rotating text-orange-400">
+        {langHelper(programs.title.part2)}
+      </span>
     </div>
     <div class="text-gray-500 text-center my-5">
       {langHelper(programs.subtitle)}
@@ -101,7 +104,7 @@ const ProgramCard = ({ program }: { program: Program }) => {
           </div>
           <button
             class="hue-rotating row-start-5 bg-blue-500 w-fit m-auto"
-            onclick={() => navigate(program.href)}
+            onclick={() => startViewTransition(() => navigate(program.href))}
           >
             {langHelper("Explore subcategories", "探索子类别")}
           </button>

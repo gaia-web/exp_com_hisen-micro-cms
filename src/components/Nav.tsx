@@ -2,6 +2,7 @@ import { useNavigate, Navigator as SolidNavigator } from "@solidjs/router";
 import { langHelper } from "../utils/language";
 import navItems from "../assets/nav-items.json";
 import "@gaia/garage";
+import { startViewTransition } from "../utils/startViewTransition";
 
 type NavItem = {
   title: {
@@ -31,9 +32,10 @@ function renderNavItem(
     <gaia-nav-item
       slot={nested ? "nested" : ""}
       onclick={() => {
-        if (item.href) {
-          navigate(item.href);
+        if (item.href == null) {
+          return;
         }
+        startViewTransition(() => item.href && navigate(item.href));
       }}
     >
       {langHelper(item.title.en, item.title.cn)}

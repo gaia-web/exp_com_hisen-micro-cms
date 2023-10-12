@@ -28,3 +28,25 @@ button:active {
 .hue-rotating {
   animation: hue-rotate 120s linear infinite;
 }
+
+@keyframes page-out {
+  to {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+@keyframes page-in {
+  from {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+::view-transition-old(root) {
+  animation: 0.3s ease-in page-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.3s ease-in page-in;
+}

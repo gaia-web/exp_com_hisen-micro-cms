@@ -7,12 +7,19 @@ function Carousel() {
     <gaia-carousel prop:timeout={5} style="height: 600px">
       {slides.map((slide) => (
         <div
-          style={`background-image: url(${slide.image}); background-size: cover; display: grid; grid-template-rows: 1fr auto auto 1fr; grid-template-columns: 1fr auto 1fr;`}
+          class="bg-cover grid grid-cols-[1fr_auto_1fr] grid-rows-[1fr_auto_auto_1fr]"
+          style={`background-image: url(${slide.image})`}
         >
-          <div style="grid-row: 2; grid-column: 2; font-size: 3em; text-shadow: 0.25em 0.25em 0.25em hsl(0, 0%, 0%, 0.5);">
+          <div
+            class="col-start-2 row-start-2 text-[3em]"
+            style="text-shadow: 0.25em 0.25em 0.25em hsl(0, 0%, 0%, 0.5);"
+          >
             {langHelper(slide.title.en, slide.title.cn)}
           </div>
-          <div style="grid-row: 3; grid-column: 2;font-size: 1.5em; text-shadow: 0.25em 0.25em 0.25em hsl(0, 0%, 0%, 0.5);">
+          <div
+            class="col-start-2 row-start-3 text-[1.5em]"
+            style="text-shadow: 0.25em 0.25em 0.25em hsl(0, 0%, 0%, 0.5);"
+          >
             {langHelper(slide.subtitle.en, slide.subtitle.cn)}
           </div>
         </div>

@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import { LanguageObject, langHelper } from "../utils/language";
 import highlights from "../assets/highlights.json";
 import programs from "../assets/programs.json";
+import testimonials from "../assets/testimonials.json";
 import { useNavigate } from "@solidjs/router";
 import { startViewTransition } from "../utils/startViewTransition";
 
@@ -15,6 +16,7 @@ function Home() {
       <Carousel />
       <HighlightsSection />
       <ProgramsSection />
+      <TestimonialsSection />
       <Footer />
     </>
   );
@@ -76,6 +78,58 @@ const ProgramsSection = () => (
   </div>
 );
 
+const TestimonialsSection = () => (
+  <div class="bg-gray-100 py-10">
+    <div class="text-bold text-3xl text-center">
+      {langHelper(testimonials.title)}
+    </div>
+    <div class="text-center">{langHelper(testimonials.subtitle)}</div>
+    <div class="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-3 w-fit m-auto my-10">
+      {testimonials.testimonials.map((testimonial) => (
+        <TestimonialDialog class="" testimonial={testimonial} />
+      ))}
+    </div>
+  </div>
+);
+
+type Testimonial = {
+  title: LanguageObject;
+  content: LanguageObject;
+  avatar: string;
+  customerName: LanguageObject;
+  customerTitle: LanguageObject;
+};
+
+const TestimonialDialog = (props: {
+  testimonial: Testimonial;
+  class?: string;
+}) => (
+  <div class={`${props.class} my-3`}>
+    <ArrowBox>
+      <div class="text-bold text-xl text-center">
+        {langHelper(props.testimonial.title)}
+      </div>
+      <div class="text-center text-gray-500">
+        {langHelper(props.testimonial.content)}
+      </div>
+    </ArrowBox>
+    <img
+      class="block rounded-full h-[50px] w-[50px] mt-[20px] mx-auto"
+      src={props.testimonial.avatar}
+    />
+    <div class="mt-[20px] mx-auto text-center">
+      {langHelper(props.testimonial.customerTitle)}
+    </div>
+  </div>
+);
+
+const ArrowBox = (props: any) => (
+  <div class="relative h-[150px] w-[350px] bg-white rounded-[10px] p-5 mx-auto">
+    <div class="bg-white left-1/2 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-4 h-4 bg-white border-r border-b border-indigo-500"></div>
+    {props.children}
+  </div>
+);
+
 type Program = {
   title: LanguageObject;
   content: LanguageObject;
@@ -98,7 +152,7 @@ const ProgramCard = ({ program }: { program: Program }) => {
             {langHelper(program.title)}
           </div>
           <div class="row-start-3">{langHelper(program.content)}</div>
-          <div class="row-start-4 text-gray-500 ">
+          <div class="row-start-4 text-gray-500">
             <span>{langHelper("Application Cycle: ", "办理周期：")}</span>
             <span>{langHelper(program.applicationCycle)}</span>
           </div>

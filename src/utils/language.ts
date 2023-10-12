@@ -6,7 +6,7 @@ const defaultValue: {
 } = { isEnglish: () => false, setIsEnglish: () => null };
 export const LanguageContext = createContext(defaultValue);
 
-export function langHelper(en: string, zh?: string) {
+export function langHelper(en: string, zh?: string | null) {
   const { isEnglish } = useContext(LanguageContext);
   return (isEnglish() ? en : zh) ?? en;
 }

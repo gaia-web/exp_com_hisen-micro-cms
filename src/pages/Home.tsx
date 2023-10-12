@@ -2,8 +2,10 @@ import "@gaia/garage";
 import Header from "../components/Header";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
-import { langHelper } from "../utils/language";
+import { LanguageObject, langHelper } from "../utils/language";
 import highlights from "../assets/highlights.json";
+import programs from "../assets/programs.json";
+import { useNavigate } from "@solidjs/router";
 
 function Home() {
   return (
@@ -11,10 +13,13 @@ function Home() {
       <Header />
       <Carousel />
       <HighlightsSection />
+      <ProgramsSection />
       <Footer />
     </>
   );
 }
+
+export default Home;
 
 const HighlightsSection = () => (
   <div class="relative max-w-[1280px] mx-auto my-10 grid grid-rows-2 md:grid-rows-1 md:grid-cols-2">
@@ -53,4 +58,55 @@ const HighlightsSection = () => (
   </div>
 );
 
-export default Home;
+const ProgramsSection = () => (
+  <div class="max-w-[1280px] mx-auto my-10">
+    <div class="text-bold text-6xl text-center">
+      <span>{langHelper(programs.title.part1)}</span>
+      <span class="hue-rotating text-orange-400">{langHelper(programs.title.part2)}</span>
+    </div>
+    <div class="text-gray-500 text-center my-5">
+      {langHelper(programs.subtitle)}
+    </div>
+    {programs.programs.map((program) => (
+      <ProgramCard program={program} />
+    ))}
+  </div>
+);
+
+type Program = {
+  title: LanguageObject;
+  content: LanguageObject;
+  applicationCycle: LanguageObject;
+  image: string;
+  href: string;
+};
+
+const ProgramCard = ({ program }: { program: Program }) => {
+  const navigate = useNavigate();
+  return (
+    <gaia-card class="my-5">
+      <div class="-my-[10px] grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-5">
+        <img
+          class="object-cover w-full h-full rounded-[10px]"
+          src={program.image}
+        />
+        <div class="grid grid-rows-[1fr_auto_auto_auto_auto_1fr] gap-y-2">
+          <div class="row-start-2 text-2xl text-bold text-center">
+            {langHelper(program.title)}
+          </div>
+          <div class="row-start-3">{langHelper(program.content)}</div>
+          <div class="row-start-4 text-gray-500 ">
+            <span>{langHelper("Application Cycle: ", "办理周期：")}</span>
+            <span>{langHelper(program.applicationCycle)}</span>
+          </div>
+          <button
+            class="hue-rotating row-start-5 bg-blue-500 w-fit m-auto"
+            onclick={() => navigate(program.href)}
+          >
+            {langHelper("Explore subcategories", "探索子类别")}
+          </button>
+        </div>
+      </div>
+    </gaia-card>
+  );
+};

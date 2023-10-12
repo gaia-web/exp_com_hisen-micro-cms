@@ -1,6 +1,5 @@
 import { useContext } from "solid-js";
 import { LanguageContext, langHelper } from "../utils/language";
-import logoUrl from "../assets/images/logo.webp";
 import "@gaia/garage";
 import Nav from "./Nav";
 
@@ -9,7 +8,7 @@ function Header() {
 
   return (
     <gaia-header prop:sticky={true}>
-      <img src={logoUrl} height="50px" />
+      <img src="/images/logo.webp" height="50px" />
       <button
         slot="extra"
         onclick={() => setIsEnglish((isEnglish) => !isEnglish)}

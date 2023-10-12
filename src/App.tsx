@@ -2,8 +2,9 @@ import { createSignal } from "solid-js";
 import { Router, Routes, Route } from "@solidjs/router";
 import { LanguageContext } from "./utils/language";
 import Home from "./pages/Home";
-import "./App.css";
 import Fallback from "./pages/Fallback";
+import Markdown from "./pages/Entrance";
+import "./App.css";
 
 function App() {
   const [isEnglish, setIsEnglish] = createSignal(true);
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" component={Home} />
+          <Route path="/entrances/*id" component={Markdown} />
           <Route path="/*" component={Fallback} />
         </Routes>
       </Router>

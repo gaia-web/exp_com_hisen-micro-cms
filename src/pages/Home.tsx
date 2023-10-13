@@ -118,6 +118,9 @@ const TestimonialDialog = (props: {
       src={props.testimonial.avatar}
     />
     <div class="mt-[20px] mx-auto text-center">
+      {langHelper(props.testimonial.customerName)}
+    </div>
+    <div class="mx-auto text-center text-sm text-gray-500">
       {langHelper(props.testimonial.customerTitle)}
     </div>
   </div>

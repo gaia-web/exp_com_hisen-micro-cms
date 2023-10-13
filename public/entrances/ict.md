@@ -33,4 +33,39 @@ ICT 全称为 Intra-Company Transferee Work Permit - 跨国公司内部调动工
 
 ![ICT](/entrances/ict.webp)
 
-既然ICT是加拿大的工作签证，那如何才能移民加拿大获得永居身份呢？工签获批后，申请人即可开始积累加拿大工作经验，随后经由我们的专业评估为您找到适合的移民路径从而实现ICT工签转移民项目，拿到加拿大的永居身份。如果您对ICT工签感兴趣，欢迎联系我们进行咨询。
+既然 ICT 是加拿大的工作签证，那如何才能移民加拿大获得永居身份呢？工签获批后，申请人即可开始积累加拿大工作经验，随后经由我们的专业评估为您找到适合的移民路径从而实现 ICT 工签转移民项目，拿到加拿大的永居身份。如果您对 ICT 工签感兴趣，欢迎联系我们进行咨询。
+
+<button style="display: block; margin: auto; background-color: #3182ce;"><a href="/contact-us">联系我们</a></button>
+
+<style>
+    button {
+        appearance: none;
+        border: none;
+        border-radius: 10px;
+        padding: 0;
+        color: white;
+        cursor: pointer;
+        overflow: hidden;
+
+        &:hover {
+            filter: brightness(1.1);
+        }
+
+        &:active {
+            filter: brightness(0.9);
+        }
+
+        & a {
+            &, &:hover, &:visited {
+                all: initial;
+                box-sizing: border-box;
+                display: block;
+                height: 100%;
+                width: 100%;
+                padding: 10px;
+                cursor: inherit;
+                color: inherit;
+            }
+        }
+    }
+</style>

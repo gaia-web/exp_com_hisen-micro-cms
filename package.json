@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@awesome-elements/markdown": "^0.2.0-rc.1",
-    "@gaia/garage": "github:gaia-web/exp_garage#953d0c8279c9a50fad79b1d34bcbd32c0bb37722",
+    "@gaia/garage": "github:gaia-web/exp_garage#70ac9d5e06bc1c480072228610e6ca313f7406c5",
     "@solidjs/router": "^0.8.3",
     "solid-js": "^1.7.8"
   },

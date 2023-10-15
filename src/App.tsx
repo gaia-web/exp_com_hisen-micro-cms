@@ -4,6 +4,7 @@ import { LanguageContext } from "./utils/language";
 import Home from "./pages/Home";
 import Fallback from "./pages/Fallback";
 import Markdown from "./pages/Entrance";
+import EEScoreCalculator from "./pages/EEScoreCalculator";
 import "./App.css";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" component={Home} />
           <Route path="/entrances/*id" component={Markdown} />
+          <Route path="/ee-score-calculator" component={EEScoreCalculator} />
           <Route path="/*" component={Fallback} />
         </Routes>
       </Router>

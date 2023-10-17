@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@awesome-elements/markdown": "^0.2.0-rc.1",
-    "@gaia/garage": "github:gaia-web/exp_garage#70ac9d5e06bc1c480072228610e6ca313f7406c5",
+    "@awesome-elements/markdown": "^0.2.0",
+    "@gaia/garage": "github:gaia-web/exp_garage#0bb61e55f4640cc5b255d747c88266b4fbd4b876",
     "@solidjs/router": "^0.8.3",
     "solid-js": "^1.7.8"
   },

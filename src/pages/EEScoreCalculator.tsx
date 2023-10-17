@@ -10,9 +10,11 @@ function EEScoreCalculator() {
         src={EEScoreCalculatorHTML}
         title="EEMark Embedded Page"
         style="overflow: hidden; width: 100%; border: none; overflow: hidden;"
-        onload={({ currentTarget }) =>
-          (currentTarget.style.height = `${currentTarget.contentDocument?.documentElement.scrollHeight}px`)
-        }
+        onload={({ currentTarget }) => {
+          currentTarget.contentWindow?.addEventListener("message", (e) => {
+            currentTarget.style.height = `${e.data}px`;
+          });
+        }}
       />
       <Footer />
     </>

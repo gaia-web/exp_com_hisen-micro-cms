@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow: hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EE Score Calculator</title>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        new ResizeObserver((entries) => {
+          entries.forEach((entry) => {
+            window.postMessage(entry.target.scrollHeight);
+          });
+        }).observe(document.body);
+      });
+    </script>
     <script defer type="text/javascript">
       jQuery(document).ready(function ($) {
         var maritalstatus = 1;
@@ -584,7 +593,8 @@
       /* 基本样式 */
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        margin: 20px;
+        margin: 0;
+        padding: 20px;
         background-color: #f4f4f4;
       }
 

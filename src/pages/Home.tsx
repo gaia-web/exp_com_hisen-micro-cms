@@ -12,12 +12,10 @@ import { startViewTransition } from "../utils/startViewTransition";
 function Home() {
   return (
     <>
-      <Header />
       <Carousel />
       <HighlightsSection />
       <ProgramsSection />
       <TestimonialsSection />
-      <Footer />
     </>
   );
 }

@@ -5,7 +5,6 @@ import EEScoreCalculatorHTML from "../assets/ee-score-calculator.html?url";
 function EEScoreCalculator() {
   return (
     <>
-      <Header />
       <iframe
         src={EEScoreCalculatorHTML}
         title="EEMark Embedded Page"
@@ -16,7 +15,6 @@ function EEScoreCalculator() {
           });
         }}
       />
-      <Footer />
     </>
   );
 }

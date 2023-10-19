@@ -9,7 +9,6 @@ function Fallback() {
   const navigate = useNavigate();
   return (
     <>
-      <Header />
       <gaia-card class="my-[200px] mx-auto w-fit text-center">
         <h3 slot="header">{langHelper("Fallback Page", "后备页面")}</h3>
         {langHelper("This Page is not ready yet.", "这个页面还没有准备好。")}
@@ -21,7 +20,6 @@ function Fallback() {
           {langHelper("Go Back Home", "回到主页")}
         </button>
       </gaia-card>
-      <Footer />
     </>
   );
 }

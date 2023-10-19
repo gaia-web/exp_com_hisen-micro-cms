@@ -6,7 +6,7 @@ function EEScoreCalculator() {
       <iframe
         src={EEScoreCalculatorHTML}
         title="EEMark Embedded Page"
-        style="overflow: hidden; height: 0; width: 100%; border: none; overflow: hidden; transition: height 3s ease-in-out;"
+        class="overflow-hidden h-0 w-full border-none transition-height duration-3s"
         onload={({ currentTarget }) => {
           currentTarget.contentWindow?.addEventListener("message", (e) => {
             currentTarget.style.height = `${e.data}px`;

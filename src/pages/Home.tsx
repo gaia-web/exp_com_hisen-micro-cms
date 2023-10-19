@@ -28,7 +28,7 @@ const HighlightsSection = () => (
   <div class="relative max-w-[1280px] mx-auto my-10 grid grid-rows-2 md:grid-rows-1 md:grid-cols-2">
     <div class="flex flex-col gap-y-3 p-3">
       <div class="flex-auto">
-        <span class="hue-rotating rounded-[5px] bg-blue-50 text-blue-400 p-2 text-sm">
+        <span class="hue-swing rounded-[5px] bg-blue-50 text-blue-400 p-2 text-sm">
           {langHelper(highlights.badge)}
         </span>
       </div>
@@ -37,7 +37,7 @@ const HighlightsSection = () => (
       {highlights.highlights.map((highlight) => (
         <div class="grid grid-rows-[auto_auto] grid-cols-[auto_1fr] gap-3">
           <div
-            class="hue-rotating col-start-1 row-start-1 rounded-full"
+            class="hue-swing col-start-1 row-start-1 rounded-full"
             style={`background-color: ${highlight.baseColor}`}
           >
             <img src={highlight.icon} />
@@ -65,7 +65,7 @@ const ProgramsSection = () => (
   <div class="max-w-[1280px] mx-auto my-10">
     <div class="text-bold text-6xl text-center">
       <span>{langHelper(programs.title.part1)}</span>
-      <span class="hue-rotating text-orange-400">
+      <span class="hue-swing text-orange-400">
         {langHelper(programs.title.part2)}
       </span>
     </div>
@@ -160,7 +160,7 @@ const ProgramCard = ({ program }: { program: Program }) => {
             <span>{langHelper(program.applicationCycle)}</span>
           </div>
           <button
-            class="hue-rotating row-start-5 bg-blue-500 w-fit m-auto"
+            class="hue-swing row-start-5 bg-blue-500 w-fit m-auto"
             onclick={() => startViewTransition(() => navigate(program.href))}
           >
             {langHelper("Explore subcategories", "探索子类别")}

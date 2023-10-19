@@ -15,18 +15,20 @@ button:active {
   filter: brightness(0.9);
 }
 
-@keyframes hue-rotate {
-  from {
-    filter: hue-rotate(0deg);
+@keyframes hue-swing {
+  0% {
+    filter: hue-rotate(-45deg);
   }
-
-  to {
-    filter: hue-rotate(360deg);
+  50% {
+    filter: hue-rotate(45deg);
+  }
+  100% {
+    filter: hue-rotate(-45deg);
   }
 }
 
-.hue-rotating {
-  animation: hue-rotate 120s linear infinite;
+.hue-swing {
+  animation: hue-swing 20s linear infinite;
 }
 
 @keyframes page-out {

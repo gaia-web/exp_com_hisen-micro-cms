@@ -22,7 +22,7 @@ function Entrance() {
       <Header />
       <awesome-markdown
         // TODO should set it as block in awesome-markdown lib
-        class="hue-rotating block max-w-[1280px] mx-auto my-3 rounded-[10px]"
+        class="hue-swing block max-w-[1280px] mx-auto my-3 rounded-[10px]"
         prop:markdown={markdown()}
         prop:styleSheets={[modestCSS, /* css */ ":host { background: #EDF2F7; padding: 10px; } img { width: 100%; }"]}
       />

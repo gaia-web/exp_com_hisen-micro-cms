@@ -12,7 +12,7 @@ function Header() {
       <button
         slot="extra"
         onclick={() => setIsEnglish((isEnglish) => !isEnglish)}
-        class="hue-rotating bg-[#F687B3]"
+        class="hue-swing bg-[#F687B3]"
       >
         {langHelper("中文", "English")}
       </button>

@@ -12,7 +12,7 @@ function Entrance() {
   const { id } = useParams();
   const [markdown, setMarkdown] = createSignal("");
   createEffect(async () => {
-    const content = await fetch(`${BASE_PATH}/${id}.md`).then((response) =>
+    const content = await fetch(`${BASE_PATH}/${id}/index.md`).then((response) =>
       response.text()
     );
     setMarkdown(() => content);

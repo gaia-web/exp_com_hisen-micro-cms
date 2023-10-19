@@ -1,8 +1,6 @@
 import "@gaia/garage";
 import "@awesome-elements/markdown";
 import { useParams } from "@solidjs/router";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import { createEffect, createSignal } from "solid-js";
 import modestCSS from "../assets/markdown-modest.css?inline";
 

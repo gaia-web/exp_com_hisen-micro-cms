@@ -1,7 +1,5 @@
 import "@gaia/garage";
-import Header from "../components/Header";
 import Carousel from "../components/Carousel";
-import Footer from "../components/Footer";
 import { LanguageObject, langHelper } from "../utils/language";
 import highlights from "../assets/highlights.json";
 import programs from "../assets/programs.json";

@@ -2,8 +2,6 @@ import "@gaia/garage";
 import { useNavigate } from "@solidjs/router";
 import { langHelper } from "../utils/language";
 import { startViewTransition } from "../utils/startViewTransition";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 
 function Fallback() {
   const navigate = useNavigate();

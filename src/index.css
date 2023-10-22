@@ -1,5 +1,21 @@
 :root {
+  --background: hsl(0, 0%, 100%);
+  --background-grey-0: hsl(0, 0%, 98%);
+  --background-grey-1: hsl(0, 0%, 95%);
+  --color: hsl(0, 0%, 0%);
+
   font-family: Arial, Helvetica, sans-serif;
+
+  @media (prefers-color-scheme: dark) {
+    --background: hsl(0, 0%, 15%);
+    --background-grey-0: hsl(0, 0%, 17%);
+    --background-grey-1: hsl(0, 0%, 20%);
+    --color: hsl(0, 0%, 100%);
+
+    background-color: var(--background);
+    color: var(--color);
+    color-scheme: dark;
+  }
 }
 
 body {

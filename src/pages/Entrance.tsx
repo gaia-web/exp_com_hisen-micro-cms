@@ -23,7 +23,7 @@ function Entrance() {
         prop:markdown={markdown()}
         prop:styleSheets={[
           modestCSS,
-          /* css */ ":host { background: #EDF2F7; padding: 10px; } img { width: 100%; }",
+          /* css */ ":host { background: var(--background-grey-1); color: var(--background-color); padding: 10px; } img { width: 100%; }",
         ]}
       />
     </>

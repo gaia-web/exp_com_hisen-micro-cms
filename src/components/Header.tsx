@@ -7,8 +7,9 @@ function Header() {
   const { setIsEnglish } = useContext(LanguageContext);
 
   return (
-    <gaia-header prop:sticky={true}>
-      <img src="/images/logo.webp" height="50px" />
+    <gaia-header prop:sticky={true} class="bg-[var(--background)]">
+      {/* TODO should use another logo instead of just invert its color */}
+      <img src="/images/logo.webp" height="50px" class="@dark:filter-invert" />
       <button
         slot="extra"
         onclick={() => setIsEnglish((isEnglish) => !isEnglish)}

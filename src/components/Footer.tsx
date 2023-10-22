@@ -4,7 +4,7 @@ import footerInfo from "../assets/footer.json";
 
 function Footer() {
   return (
-    <div class="relative grid grid grid-cols-[1fr_auto_auto_auto_1fr] gap-x-5 py-5 bg-[#F7FAFC]">
+    <div class="relative grid grid grid-cols-[1fr_auto_auto_auto_1fr] gap-x-5 py-5 bg-[var(background-grey-0)]">
       <div class="col-start-2">
         <span class="font-bold">{langHelper("Address: ", "地址：")}</span>
         <span class="font-bold">{langHelper(footerInfo.address.en)}</span>

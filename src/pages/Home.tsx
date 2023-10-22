@@ -75,7 +75,7 @@ const ProgramsSection = () => (
 );
 
 const TestimonialsSection = () => (
-  <div class="bg-gray-100 py-10">
+  <div class="bg-[var(--background-grey-1)] py-10">
     <div class="text-bold text-3xl text-center">
       {langHelper(testimonials.title)}
     </div>
@@ -123,8 +123,8 @@ const TestimonialDialog = (props: {
 );
 
 const ArrowBox = (props: any) => (
-  <div class="relative h-[150px] w-[350px] bg-white rounded-[10px] p-5 mx-auto">
-    <div class="bg-white left-1/2 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-4 h-4 bg-white border-r border-b border-indigo-500"></div>
+  <div class="relative h-[150px] max-w-[350px] bg-[var(--background)] rounded-[10px] p-5 mx-auto">
+    <div class="bg-[var(--background)] left-1/2 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-4 h-4 border-r border-b border-indigo-500"></div>
     {props.children}
   </div>
 );

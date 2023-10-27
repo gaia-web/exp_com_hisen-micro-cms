@@ -1,11 +1,12 @@
 import "@gaia/garage";
 import Carousel from "../components/Carousel";
 import { LanguageObject, langHelper } from "../utils/language";
-import highlights from "../assets/highlights.json";
-import programs from "../assets/programs.json";
-import testimonials from "../assets/testimonials.json";
 import { useNavigate } from "@solidjs/router";
 import { startViewTransition } from "../utils/startViewTransition";
+
+const programs = await fetch('/api/general/programs').then(response => response.json());
+const highlights = await fetch('/api/general/highlights').then(response => response.json());
+const testimonials = await fetch('/api/general/testimonials').then(response => response.json());
 
 function Home() {
   return (
@@ -30,7 +31,7 @@ const HighlightsSection = () => (
       </div>
       <div class="text-bold text-5xl">{langHelper(highlights.title)}</div>
       <div class="text-gray-500">{langHelper(highlights.subtitle)}</div>
-      {highlights.highlights.map((highlight) => (
+      {highlights.highlights.map((highlight: any) => (
         <div class="grid grid-rows-[auto_auto] grid-cols-[auto_1fr] gap-3">
           <div
             class="hue-swing col-start-1 row-start-1 rounded-full"
@@ -68,7 +69,7 @@ const ProgramsSection = () => (
     <div class="text-gray-500 text-center my-5">
       {langHelper(programs.subtitle)}
     </div>
-    {programs.programs.map((program) => (
+    {programs.programs.map((program: any) => (
       <ProgramCard program={program} />
     ))}
   </div>
@@ -81,7 +82,7 @@ const TestimonialsSection = () => (
     </div>
     <div class="text-center">{langHelper(testimonials.subtitle)}</div>
     <div class="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-3 w-fit m-auto my-10">
-      {testimonials.testimonials.map((testimonial) => (
+      {testimonials.testimonials.map((testimonial: any) => (
         <TestimonialDialog class="" testimonial={testimonial} />
       ))}
     </div>

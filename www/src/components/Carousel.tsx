@@ -1,11 +1,12 @@
 import "@gaia/garage";
-import slides from "../assets/slides.json";
 import { langHelper } from "../utils/language";
+
+const slides = await fetch('/api/general/slides').then(response => response.json());
 
 function Carousel() {
   return (
     <gaia-carousel prop:timeout={5} style="height: 600px">
-      {slides.map((slide) => (
+      {slides.map((slide: any) => (
         <div
           class="bg-cover grid grid-cols-[1fr_auto_1fr] grid-rows-[1fr_auto_auto_1fr]"
           style={`background-image: url(${slide.image})`}

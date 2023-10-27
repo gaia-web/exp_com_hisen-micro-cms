@@ -1,8 +1,9 @@
 import { useNavigate, Navigator as SolidNavigator } from "@solidjs/router";
 import { langHelper } from "../utils/language";
-import navItems from "../assets/nav-items.json";
 import "@gaia/garage";
 import { startViewTransition } from "../utils/startViewTransition";
+
+const navItems = await fetch('/api/general/navItems').then(response => response.json());
 
 type NavItem = {
   title: {
@@ -18,7 +19,7 @@ function Nav() {
 
   return (
     <gaia-nav slot="collapsible">
-      {navItems.map((item) => renderNavItem(item as NavItem, navigate))}
+      {navItems.map((item: any) => renderNavItem(item as NavItem, navigate))}
     </gaia-nav>
   );
 }

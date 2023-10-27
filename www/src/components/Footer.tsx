@@ -1,6 +1,7 @@
 import "@gaia/garage";
 import { langHelper } from "../utils/language";
-import footerInfo from "../assets/footer.json";
+
+const footerInfo = await fetch('/api/general/footer').then(response => response.json());
 
 function Footer() {
   return (

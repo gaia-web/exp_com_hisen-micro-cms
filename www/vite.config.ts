@@ -3,5 +3,8 @@ import solid from "vite-plugin-solid";
 import UnoCSS from "unocss/vite";
 
 export default defineConfig({
+  build: {
+    target: "ES2022",
+  },
   plugins: [solid(), UnoCSS()],
 });

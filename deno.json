@@ -1,6 +1,6 @@
 {
   "imports": {
-    "deno-micro-cms": "https://raw.githubusercontent.com/gaia-web/exp_deno-micro-cms/49ac751f3f81557874e992e7576fe6cc7059f741/mod.ts"
+    "deno-micro-cms": "https://raw.githubusercontent.com/gaia-web/exp_deno-micro-cms/45b54ada344f064a56b530dbc6ef4881eb63a5e2/mod.ts"
   },
   "tasks": {
     "dev": "DEV=1 PASSCODE=test deno run -A --unstable --watch app.ts",

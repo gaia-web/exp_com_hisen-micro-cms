@@ -32,7 +32,7 @@ jobs:
         working-directory: "./fe"
         run: "npm ci && npm run build" # 📝 Update the build command(s) if necessary
 
-      - name: Clear step
+      - name: Clean step
         run: "rm -r fe"
 
       - name: Upload to Deno Deploy
@@ -40,4 +40,3 @@ jobs:
         with:
           project: "exp-hisen-micro-cms"
           entrypoint: "https://raw.githubusercontent.com/gaia-web/exp_deno-micro-cms/6ecd133f5f804c860c145851680afbaec989f54b/mod.ts" # 📝 Update the entrypoint if necessary
-          root: "/" # 📝 Update the root if necessary

@@ -39,4 +39,4 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "exp-hisen-micro-cms"
-          entrypoint: "https://raw.githubusercontent.com/gaia-web/exp_deno-micro-cms/6ecd133f5f804c860c145851680afbaec989f54b/mod.ts" # 📝 Update the entrypoint if necessary
+          entrypoint: "app.ts" # 📝 Update the entrypoint if necessary

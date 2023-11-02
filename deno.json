@@ -1,7 +1,5 @@
 {
-  "imports": {
-    "deno-micro-cms": "https://raw.githubusercontent.com/gaia-web/exp_deno-micro-cms/6ecd133f5f804c860c145851680afbaec989f54b/mod.ts"
-  },
+  "importMap": "./imports.json",
   "tasks": {
     "dev": "DEV=1 PASSCODE=test deno run -A --unstable --watch app.ts",
     "dev:debugger": "DEV=1 PASSCODE=test deno run -A --unstable --watch --inspect-wait app.ts",
@@ -9,6 +7,7 @@
     "build": "cd www && npm ci && npm run build"
   },
   "exclude": [
-    "/www", "www_admin"
+    "/www",
+    "www_admin"
   ]
 }

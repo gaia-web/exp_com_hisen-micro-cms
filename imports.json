@@ -1,5 +1,5 @@
 {
   "imports": {
-    "deno-micro-cms": "https://raw.githubusercontent.com/gaia-web/exp_deno-micro-cms/b909f05b0694925acac8e02082509494d5d08783/mod.ts"
+    "deno-micro-cms": "https://raw.githubusercontent.com/gaia-web/exp_deno-micro-cms/2200eaba86a49a48fc0413e099651cecd0a43847/mod.ts"
   }
 }
